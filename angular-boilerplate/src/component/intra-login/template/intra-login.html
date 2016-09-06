@@ -7,7 +7,7 @@
                         <form method="post">
                             <md-input-container>
                                 <label>Email</label>
-                                <input ng-model="vm.user.username">
+                                <input ng-model="vm.user.login">
                             </md-input-container>
                             <md-input-container>
                                 <label>Password</label>
@@ -15,7 +15,7 @@
                             </md-input-container>
                             <md-input-container layout-align="center center">
                                 <div layout="row" layout-sm="column" layout-margin>
-                                    <md-button ng-click="vm.login(vm.user)" class="md-raised" layout="center" flex="50" flex-sm="100" ng-disabled="!vm.user.username || !vm.user.password">Login</md-button>
+                                    <md-button ng-click="vm.login(vm.user)" class="md-raised" layout="center" flex="50" flex-sm="100" ng-disabled="!vm.user.login || !vm.user.password">Login</md-button>
                                 </div>
                             </md-input-container>
                         </form>

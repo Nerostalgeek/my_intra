@@ -6,7 +6,7 @@ class IntraLogin {
     console.log('Hello, this is constructor of Login component !');
 
     this.user = {
-      username: '',
+      login: '',
       password: '',
     };
   }

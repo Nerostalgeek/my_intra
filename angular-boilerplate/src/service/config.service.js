@@ -46,12 +46,13 @@ class ConfigService {
    * Transform API call (with route and params as object) into callable Epitech route
    * Example : route = '/', params = {a: b}
    * => http://intra.epitech.eu/?format=json&a=b
+   * If you use POST DATA (like form), don't use getParams
    * @param route
-   * @param params
+   * @param getParams
    * @returns {string}
    */
-  apiBuilder(route, params) {
-    return `${this.get('API_URL')}${route}?format=json&${SERVICES.get('$httpParamSerializer')(params)}`;
+  apiBuilder(route, getParams = {}) {
+    return `${this.get('API_URL')}${route}?format=json&${SERVICES.get('$httpParamSerializer')(getParams)}`;
   }
 
   /**

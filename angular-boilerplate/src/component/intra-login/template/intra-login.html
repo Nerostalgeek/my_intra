@@ -1,0 +1,27 @@
+<section class="intra__login">
+    <div layout="column" flex role="main">
+        <md-content layout="vertical" flex id="content">
+            <div layout="row" layout-align="center center" layout-fill>
+                <md-whiteframe class="md-whiteframe-z1" layout="column" flex="30" layout-padding>
+                    <md-content md-theme="docs-dark">
+                        <form method="post">
+                            <md-input-container>
+                                <label>Email</label>
+                                <input ng-model="vm.user.username">
+                            </md-input-container>
+                            <md-input-container>
+                                <label>Password</label>
+                                <input ng-model="vm.user.password" type="password">
+                            </md-input-container>
+                            <md-input-container layout-align="center center">
+                                <div layout="row" layout-sm="column" layout-margin>
+                                    <md-button ng-click="vm.login(vm.user)" class="md-raised" layout="center" flex="50" flex-sm="100" ng-disabled="!vm.user.username || !vm.user.password">Login</md-button>
+                                </div>
+                            </md-input-container>
+                        </form>
+                    </md-content>
+                </md-whiteframe>
+            </div>
+        </md-content>
+    </div>
+</section>
